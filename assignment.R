@@ -9,7 +9,9 @@ works <- gutenberg_works()
 # (1) Отберите ряды, в которых gutenberg_author_id равен 65 или 410;
 # после этого выберите два столбца: author, title
 my_data <- works |> 
-  # ваш код здесь
+ # my_data <- works |> 
+  filter(gutenberg_author_id %in% c(65, 410)) |> 
+  select(author, title)
 
 # (2) Используйте функцию separate(), чтобы разделить 
 # столбец с именем и фамилией на два новых: author, name. 
