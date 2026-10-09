@@ -17,7 +17,8 @@ my_data <- works |>
 # столбец с именем и фамилией на два новых: author, name. 
 # Удалите столбец name
 my_data2 <- my_data |>
-  # ваш код здесь
+  # separate(author, into = c("author", "name"), sep = ", ") |> 
+    select(-name)
 
 # (3) Используйте group_by() и summarise(), чтобы узнать,
 # сколько произведений Шекспира и Марлоу хранится в библиотеке Gutenberg
